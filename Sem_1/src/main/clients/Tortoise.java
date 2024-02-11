@@ -2,7 +2,7 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Tortoise extends Animal {
+public class Tortoise extends Animal implements Goable,  Swimable {
     String habitat;
 
     public Tortoise(String nickname, Owner owner, LocalDate birthDate, Illness illness, String habitat) {
@@ -16,17 +16,18 @@ public class Tortoise extends Animal {
     }
 
     @Override
-    public void toDo() {
-        System.out.println("Я умею двигаться");
+    public void eat() {
+        System.out.println("Черепаха кушает");
     }
 
     @Override
-    public void toFly() {
-        System.out.println("Прости, я не умею летать");
+    public void toDo() {
+        System.out.println("Я умею двигаться");
     }
 
     @Override
     public void toSwim() {
         System.out.println("Я умею плавать");
     }
+
 }

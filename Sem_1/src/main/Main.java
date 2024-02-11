@@ -3,68 +3,45 @@ package main;
 import main.clients.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        Animal cat = new Animal("Солнышко", new Owner("Яхимович Иван Иванович"),
+        Cat cat = new Cat("Солнышко", new Owner("Яхимович Иван Иванович"),
                 LocalDate.of(2021, 12,24),
-                new Illness("Туберкулез")); // Создаем экземпляр класса
+                new Illness("Туберкулез"), 10D); // Создаем экземпляр класса
 
-        Animal duk_1 = new Duck("Уточка", new Owner("Иванов Иван иванович"),
+        Duck duk_1 = new Duck("Уточка", new Owner("Иванов Иван иванович"),
                 LocalDate.of(2020,9, 11), new Illness("Чума"), "Больше 2 кг");
 
-        duk_1.toDo();
-        duk_1.toFly();
-        duk_1.toSwim();
+        Pigeon pig_1 = new Pigeon("Крылатик", new Owner("Яхимович Илья Иванович"),
+                LocalDate.of(2021, 12,24), new Illness("Туберкулез"));
 
-        Animal catty = new Cat();
+        Cat catty = new Cat();
+        Tortoise tortoise_1 = new Tortoise();
 
-        catty.toDo();
-        catty.toFly();
-        catty.toSwim();
 
-        Animal tortoise_1 = new Tortoise();
 
-        tortoise_1.toDo();
-        tortoise_1.toFly();
-        tortoise_1.toSwim();
 
-//        System.out.println(cat.getOwner());
-//        System.out.println(cat.getNickname());
+        List <Animal> animals = new ArrayList<Animal>();
+
+        animals.add(cat);
+        animals.add(duk_1);
+        animals.add(pig_1);
+        animals.add(catty);
+        animals.add(tortoise_1);
+
 //
-//        cat.setIllness(new Illness(null));
-//
-//        System.out.println(cat.getIllness());
-//
-//        Animal testAnimal = new Animal();
-//
-//        cat.lifeCycle();
-//
-//
-//        System.out.println(cat.getType());
-//        System.out.println(cat);
-//
-//        Animal catty = new Cat();
-//        Dog doggy = new Dog();
-//
-//        System.out.println(doggy.getType());
-//        System.out.println(catty.getType());
-//
-//        System.out.println(catty);
-//
-//        Cat.meow();
-//
-//        List<Animal> animals = new ArrayList<Animal>();
-//
-//        animals.add(catty);
-//        animals.add(doggy);
-//        animals.add(cat);
-//
+////
 //        int i = 0;
-//        for(Animal animal : animals){
-//            System.out.println(i + " " + animal);
-//            i ++;
-//        }
+//        for( i = 0; i < animals.size(); i ++){
+//            Animal an = animals.get(i);
+//            if (an instanceof Cat)
+//            ((Cat) an).eat();
+
+
+        }
     }
-}
+
